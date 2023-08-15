@@ -47,47 +47,34 @@ function promptUser() {
         },
     ]).then((answers) => {
           // Calling write file function to generate SVG file
-          writeToFile("logo.svg", answers);
+          writeToFile("./examples/logo.svg", answers);
       });
     }
 
-
-
-function writeToFile(fileName,userAnswer){
-    
-    // fs.writeFile('./graph.svg',generateSVG(userAnswer), (err) => {
-    //     err ? console.log(err) : console.log("Generated logo.svg");
-    //   });
-  // new Shape(userAnswer)
+// Generate logo.svg in "examples" folder
+function writeToFile(filePath,userAnswer){
   switch(userAnswer.shape) {
     case 'Triangle':
       const triangleContent = new Triangle(userAnswer)
-      fs.writeFile('./graph.svg',triangleContent.render(), (err) => {
+      fs.writeFile(filePath,triangleContent.render(), (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
       });
       break
     case 'Square':
       const squareContent = new Square(userAnswer)
-      fs.writeFile('./graph.svg',squareContent.render(), (err) => {
+      fs.writeFile(filePath,squareContent.render(), (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
-      });
+      })
       break
     case 'Circle':
       const circleContent = new Circle(userAnswer)
-      fs.writeFile('./graph.svg',circleContent.render(), (err) => {
+      fs.writeFile(filePath,circleContent.render(), (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
       });
       break
   }
-
-
-
-    // fs.writeFile('./graph.svg',generateSVG(userAnswer), (err) => {
-    //   err ? console.log(err) : console.log("Generated logo.svg");
-    // });
 }
 
 
-
-  // Calling promptUser function so inquirer prompts fire off when application is ran
-  promptUser();
+// Calling promptUser function so inquirer prompts fire off when application is ran
+promptUser();
