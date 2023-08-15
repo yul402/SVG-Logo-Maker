@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateSVG = require('./utils/generateSVG');
+const { Shape,Triangle, Square, Circle } = require('./lib/shapes');
 
 
 
@@ -55,9 +55,36 @@ function promptUser() {
 
 function writeToFile(fileName,userAnswer){
     
-    fs.writeFile('./graph.svg',generateSVG(userAnswer), (err) => {
+    // fs.writeFile('./graph.svg',generateSVG(userAnswer), (err) => {
+    //     err ? console.log(err) : console.log("Generated logo.svg");
+    //   });
+  // new Shape(userAnswer)
+  switch(userAnswer.shape) {
+    case 'Triangle':
+      const triangleContent = new Triangle(userAnswer)
+      fs.writeFile('./graph.svg',triangleContent.render(), (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
       });
+      break
+    case 'Square':
+      const squareContent = new Square(userAnswer)
+      fs.writeFile('./graph.svg',squareContent.render(), (err) => {
+        err ? console.log(err) : console.log("Generated logo.svg");
+      });
+      break
+    case 'Circle':
+      const circleContent = new Circle(userAnswer)
+      fs.writeFile('./graph.svg',circleContent.render(), (err) => {
+        err ? console.log(err) : console.log("Generated logo.svg");
+      });
+      break
+  }
+
+
+
+    // fs.writeFile('./graph.svg',generateSVG(userAnswer), (err) => {
+    //   err ? console.log(err) : console.log("Generated logo.svg");
+    // });
 }
 
 
