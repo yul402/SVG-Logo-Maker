@@ -1,0 +1,21 @@
+[
+    {
+        "text":"abc",
+        "textColor":"red",
+        "shape":"Triangle",
+        "shapeColor":"black"
+    },
+    {
+        "text":"def",
+        "textColor":"blue",
+        "shape":"Square",
+        "shapeColor":"black"
+    },
+    {
+        "text":"ghi",
+        "textColor":"green",
+        "shape":"Circle",
+        "shapeColor":"black"
+    }
+
+]
