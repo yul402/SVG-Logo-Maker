@@ -47,7 +47,7 @@ function promptUser() {
       },
     ]).then((answers) => {
       // Calling write file function to generate SVG file
-      writeToFile( answers);
+      writeToFile(answers);
     });
 }
 
@@ -59,7 +59,7 @@ function writeToFile( userAnswer) {
       userShape = new Triangle(userAnswer)
       break
     case 'Square':
-     userShape = new Square(userAnswer)
+      userShape = new Square(userAnswer)
       break
     case 'Circle':
       userShape = new Circle(userAnswer)

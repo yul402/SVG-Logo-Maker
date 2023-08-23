@@ -1,9 +1,11 @@
 # SVG-Logo-Maker
 ![GitHub license](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
 
+Walk-through Video: https://watch.screencastify.com/v/2ItG4wutdQAd0E2RiLT8
+
 ## Description
 
-This is a Node.js command-line application that takes in user input to generate a logo and save it as an SVG file. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file.
+This application, powered by Node.js, operates via the command line and empowers users to create logos by inputting their preferences. It guides users through selecting colors, shapes, and text for the logo, ultimately saving the customized design as an SVG file.
 
 ## Table of Contents
 
@@ -31,8 +33,20 @@ npm install
 
 ## Usage
 
-- When user clicks on the delete icon next to note, that note is deleted and removed from list.
-![Delete note](./Asset/delete-note.png)
+- User can generate circle svg logo with this application.
+
+<img src="./examples/circle-svg.png" width="200">
+
+- User can generate square svg logo with this application.
+
+<img src="./examples/square-svg.png" width="200">
+
+
+- User can generate triangle svg logo with this application.
+
+<img src="./examples/triangle-svg.png" width="200">
+
+
 
 ## License
 
